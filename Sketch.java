@@ -1,56 +1,61 @@
+/**
+ * Description: sketches an animated house
+ * Author: @EdricLai
+ */
+
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
-  /**
+  /*
    * called once
    * global variables
   */
-    // screen
-    int intWidth = 700;
-    int intHeight = 500;
-    float fltWidth = intWidth;
-    float fltHeight = intHeight;
+  // screen
+  int intWidth = 700;
+  int intHeight = 700;
+  float fltWidth = intWidth;
+  float fltHeight = intHeight;
 
-    // real time
-    int intSecond = second();
-    int intMinute = minute();
-    int intHour = hour();
+  // real time
+  int intSecond = second();
+  int intMinute = minute();
+  int intHour = hour();
 
-    // timers
-    float fltTimer = 0f;
-    int intFps = 0;
+  // timers
+  float fltTimer = 0f;
+  int intFps = 0;
 
-    // rgb
-    int intBgR = 225;
-    int intBgG = 250;
-    int intBgB = 255;
+  // rgb
+  int intBgR = 225;
+  int intBgG = 250;
+  int intBgB = 255;
 
-    // sun
-    float fltSunDiameter = fltWidth / 5f;
-    float fltSunPosX = 0f - fltSunDiameter * 999f;
-    float fltSunPosY = fltHeight / 3f;
+  // sun
+  float fltSunDiameter = fltWidth / 5f;
+  float fltSunPosX = 0f - fltSunDiameter * 999f;
+  float fltSunPosY = fltHeight / 3f;
 
-    // moon
-    float fltMoonDiameter = fltWidth / 6f;
-    float fltMoonPosX = 0f - fltMoonDiameter;
-    float fltMoonPosY = fltHeight / 3f;
+  // moon
+  float fltMoonDiameter = fltWidth / 6f;
+  float fltMoonPosX = 0f - fltMoonDiameter;
+  float fltMoonPosY = fltHeight / 3f;
 
-    // star
-    float fltStarDiameter = 0f;
-    float fltStarPosX = 0f;
-    float fltStarPosY = 0f;
+  // star
+  float fltStarDiameter = 0f;
+  float fltStarPosX = 0f;
+  float fltStarPosY = 0f;
 
-    // door
-    float fltDoorWidth = fltWidth / 18f;
-    float fltDoorHeight = fltHeight / 7f;
-    float fltDoorXCoords = fltWidth / 2f - fltDoorWidth / 2f;
-    float fltDoorYCoords = fltHeight - fltDoorHeight;
+  // door
+  float fltDoorWidth = fltWidth / 18f;
+  float fltDoorHeight = fltHeight / 7f;
+  float fltDoorXCoords = fltWidth / 2f - fltDoorWidth / 2f;
+  float fltDoorYCoords = fltHeight - fltDoorHeight;
 
-    // windows
-    float fltWindowDiameter = fltWidth / 15f;
-    float fltWindow1XCoords = fltWidth / 2f + fltWidth / 10f;
-    float fltWindow2XCoords = fltWidth / 2f - fltWidth / 10f;
-    float fltWindowYCoords = fltHeight / 1.2f;
+  // windows
+  float fltWindowDiameter = fltWidth / 15f;
+  float fltWindow1XCoords = fltWidth / 2f + fltWidth / 10f;
+  float fltWindow2XCoords = fltWidth / 2f - fltWidth / 10f;
+  float fltWindowYCoords = fltHeight / 1.2f;
 
   /**
    * called once
